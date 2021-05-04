@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        
+        <!-- hr.applicant inherit tree view -->
+        <record id="rm_case_tree_view_job" model="ir.ui.view">
+            <field name="name">hr.applicant.inherit.view.tree</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <field name="priority" position="after">
+                    <field name="next_meeting" widget="date" optional="hide"/>
+                </field>                
+            </field>
+        </record>
+
+        <!-- hr.applicant inherit form view -->
+        <record id="hr_applicant_view_form" model="ir.ui.view">
+            <field name="name">hr.applicant.inherit.view.form</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                 <field name="priority" position="after">
+                    <field name="next_meeting"/>
+                </field>                      
+            </field>
+        </record>
+        
+    </data>
+</odoo>
