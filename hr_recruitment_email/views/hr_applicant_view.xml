@@ -9,6 +9,9 @@
             <field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"/>
             <field name="arch" type="xml">
                 <!-- Add your xpath here -->
+                <field name="partner_name" position="before">
+                    <field name="title_id" optional="hide"/>
+                 </field>
                 <field name="priority" position="after">
                     <field name="next_meeting" widget="date" optional="hide"/>
                 </field>                
@@ -22,6 +25,9 @@
             <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
             <field name="arch" type="xml">
                 <!-- Add your xpath here -->
+                 <field name="partner_id" position="before">
+                    <field name="title_id"/>
+                 </field>
                  <field name="priority" position="after">
                     <field name="next_meeting"/>
                 </field>                      

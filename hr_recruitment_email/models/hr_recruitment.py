@@ -9,6 +9,7 @@ class Applicant(models.Model):
     _inherit = 'hr.applicant'
 
     next_meeting = fields.Datetime(string='Next Meeting')
+    title_id = fields.Many2one('res.partner.title')
 
     def _track_template(self, changes):
         res = super(Applicant, self)._track_template(changes)

@@ -3,7 +3,7 @@
     'version': '14.0.1.0.0',
     'summary': 'E-Mails extensions, like date for first meet and email on refuse',
     'category': 'Human Resources/Recruitment',
-    'author': 'Martin Reisenhofer',    
+    'author': 'Martin Reisenhofer',
     'website': 'https://github.com/oerp-at',
     'license': 'LGPL-3',    
     'depends': [
